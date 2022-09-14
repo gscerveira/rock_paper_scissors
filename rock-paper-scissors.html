@@ -27,6 +27,9 @@
             playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
             return playerChoice;
         }
+        
+        let computerChoice = getComputerChoice();
+        let playerChoice = getPlayerChoice();
 
         function playRound(computerChoice, playerChoice) {
             let playerWin = `${playerChoice} beats ${computerChoice}.`
@@ -50,6 +53,30 @@
             else {
                 let result = "Unsupported input."
                 return result;
+            }
+        }
+
+        function game () {
+            for (let i = 0; i < 5; i++) {
+                let pointsCounter = 0;
+                let result = playRound(computerChoice, playerChoice);
+                if (result.includes("won")) {
+                    pointsCounter += 1;
+                }
+                else if (result.includes("lost")) {
+                    pointsCounter -= 1;
+                }
+                console.log(result)
+            }
+
+            if (pointsCounter > 0) {
+                console.log("Player wins!");
+            }
+            else if (pointsCounter < 0) {
+                console.log("Computer wins!");
+            }
+            else {
+                console.log("It's a draw!");
             }
         }
     </script>
