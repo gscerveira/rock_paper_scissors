@@ -28,9 +28,6 @@
             return playerChoice;
         }
         
-        let computerChoice = getComputerChoice();
-        let playerChoice = getPlayerChoice();
-
         function playRound(computerChoice, playerChoice) {
             let playerWin = `${playerChoice} beats ${computerChoice}.`
             let computerWin = `${computerChoice} beats ${playerChoice}.`
@@ -59,7 +56,7 @@
         function game () {
             let pointsCounter = 0;
             for (let i = 0; i < 5; i++) {
-                let result = playRound(computerChoice, playerChoice);
+                let result = playRound(getComputerChoice(), getPlayerChoice());
                 if (result.includes("won")) {
                     pointsCounter += 1;
                 }
