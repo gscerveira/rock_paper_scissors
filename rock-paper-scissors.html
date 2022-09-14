@@ -29,7 +29,10 @@
         }
 
         function playRound(computerChoice, playerChoice) {
-            
+            if (computerChoice === playerChoice) {
+                let result = "Stalemate!";
+                return result;
+            }
         }
     </script>
 </body>
