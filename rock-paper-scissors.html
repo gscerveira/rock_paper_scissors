@@ -10,6 +10,9 @@
     <script>
         let options = ["Rock", "Paper", "Scissors"];
 
+        let winStatements = [`${options[0]} beats ${options[2]}.`, `${options[1]} beats ${options[0]}.`,
+        `${options[2]} beats ${options[1]}.`];
+        
         function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
         }
@@ -23,6 +26,10 @@
             let playerChoice = prompt("Rock, Paper or Scissors?");
             playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
             return playerChoice;
+        }
+
+        function playRound(computerChoice, playerChoice) {
+            
         }
     </script>
 </body>
