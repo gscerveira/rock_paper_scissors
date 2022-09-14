@@ -29,14 +29,23 @@
         }
 
         function playRound(computerChoice, playerChoice) {
-            let resultTest = `${playerChoice} beats ${computerChoice}.`
+            let playerWin = `${playerChoice} beats ${computerChoice}.`
+            let computerWin = `${computerChoice} beats ${playerChoice}.`
 
-            if (computerChoice === playerChoice) {
-                let result = "Stalemate!";
+            if (winStatements.includes(playerWin)) {
+                let result = "You won! " + playerWin;
                 return result;
             }
 
-            else if ()
+            else if (winStatements.includes(computerWin)) {
+                let result = "You lost! " + computerWin;
+                return result;
+            }
+
+            else {
+                let result = "Stalemate!";
+                return result;
+            }
         }
     </script>
 </body>
