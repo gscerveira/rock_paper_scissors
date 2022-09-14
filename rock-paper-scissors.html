@@ -42,8 +42,13 @@
                 return result;
             }
 
-            else {
+            else if (computerChoice === playerChoice) {
                 let result = "Stalemate!";
+                return result;
+            }
+
+            else {
+                let result = "Unsupported input."
                 return result;
             }
         }
