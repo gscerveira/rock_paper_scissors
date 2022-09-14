@@ -18,6 +18,12 @@
             let computerChoice = options[getRndInteger(0, 2)];
             return computerChoice;
         }
+
+        function getPlayerChoice() {
+            let playerChoice = prompt("Rock, Paper or Scissors?");
+            playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
+            return playerChoice;
+        }
     </script>
 </body>
 </html>
