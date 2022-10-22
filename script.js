@@ -3,8 +3,7 @@ let options = ["Rock", "Paper", "Scissors"];
 /*make buttons for player selection, afterwards create a new "step", where the player selects an opponent, this selection
     will play the round*/
 
-let winStatements = [`${options[0]} beats ${options[2]}.`, `${options[1]} beats ${options[0]}.`,
-`${options[2]} beats ${options[1]}.`];
+
 
 function getRndInteger(min, max) {
 return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -22,29 +21,18 @@ function getPlayerChoice() {
 }
 
 function playRound(computerChoice, playerChoice) {
-    let playerWin = `${playerChoice} beats ${computerChoice}.`
-    let computerWin = `${computerChoice} beats ${playerChoice}.`
-
-    if (winStatements.includes(playerWin)) {
-        let result = "You won! " + playerWin;
-        return result;
+    let result;
+    if (computerChoice === playerChoice) {
+        result = `Yes! I was thinking of ${playerChoice}!`;
     }
-
-    else if (winStatements.includes(computerWin)) {
-        let result = "You lost! " + computerWin;
-        return result;
-    }
-
-    else if (computerChoice === playerChoice) {
-        let result = "Stalemate!";
-        return result;
-    }
-
     else {
-        let result = "Unsupported input."
-        return result;
+        result = `No! I was thinking of ${computerChoice}!`;
     }
+    
+    roundResult.textContent = result;
 }
+
+const roundResult = document.createElement('div');
 
 const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
