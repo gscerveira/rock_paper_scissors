@@ -46,7 +46,7 @@ function playRound(computerChoice, playerChoice) {
     }
 }
 
-function game () {
+/*function game () {
     let pointsCounter = 0;
     for (let i = 0; i < 5; i++) {
         let result = playRound(getComputerChoice(), getPlayerChoice());
@@ -68,6 +68,6 @@ function game () {
     else {
         console.log("It's a draw!");
     }
-}
+}*/
 
 game();
