@@ -46,6 +46,14 @@ function playRound(computerChoice, playerChoice) {
     }
 }
 
+const btnRock = document.querySelector('#rock');
+const btnPaper = document.querySelector('#paper');
+const btnScissors = document.querySelector('#scissors');
+
+btnRock.addEventListener('click', playRound(getComputerChoice(), "Rock"));
+btnPaper.addEventListener('click', playRound(getComputerChoice(), "Paper"));
+btnScissors.addEventListener('click', playRound(getComputerChoice(), "Scissors"));
+
 /*function game () {
     let pointsCounter = 0;
     for (let i = 0; i < 5; i++) {
