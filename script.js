@@ -1,10 +1,5 @@
 let options = ["Rock", "Paper", "Scissors"];
 
-/*make buttons for player selection, afterwards create a new "step", where the player selects an opponent, this selection
-    will play the round*/
-
-
-
 function getRndInteger(min, max) {
 return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -33,6 +28,8 @@ function playRound(computerChoice, playerChoice) {
 }
 
 const roundResult = document.createElement('div');
+document.querySelector("body").appendChild(roundResult);
+
 
 const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
@@ -65,5 +62,3 @@ btnScissors.addEventListener('click', playRound(getComputerChoice(), "Scissors")
         console.log("It's a draw!");
     }
 }*/
-
-game();
