@@ -1,5 +1,17 @@
 let options = ["Rock", "Paper", "Scissors"];
 
+const roundResult = document.createElement('div');
+document.querySelector("body").appendChild(roundResult);
+
+
+const btnRock = document.querySelector('#rock');
+const btnPaper = document.querySelector('#paper');
+const btnScissors = document.querySelector('#scissors');
+
+btnRock.addEventListener('click', () => playRound(getComputerChoice(), "Rock"));
+btnPaper.addEventListener('click', () => playRound(getComputerChoice(), "Paper"));
+btnScissors.addEventListener('click', () => playRound(getComputerChoice(), "Scissors"));
+
 function getRndInteger(min, max) {
 return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -9,11 +21,11 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-function getPlayerChoice() {
+/*function getPlayerChoice() {
     let playerChoice = prompt("Rock, Paper or Scissors?");
     playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
     return playerChoice;
-}
+}*/
 
 function playRound(computerChoice, playerChoice) {
     let result;
@@ -26,18 +38,6 @@ function playRound(computerChoice, playerChoice) {
     
     roundResult.textContent = result;
 }
-
-const roundResult = document.createElement('div');
-document.querySelector("body").appendChild(roundResult);
-
-
-const btnRock = document.querySelector('#rock');
-const btnPaper = document.querySelector('#paper');
-const btnScissors = document.querySelector('#scissors');
-
-btnRock.addEventListener('click', playRound(getComputerChoice(), "Rock"));
-btnPaper.addEventListener('click', playRound(getComputerChoice(), "Paper"));
-btnScissors.addEventListener('click', playRound(getComputerChoice(), "Scissors"));
 
 /*function game () {
     let pointsCounter = 0;
