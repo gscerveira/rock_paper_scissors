@@ -1,7 +1,7 @@
 let options = ["Rock", "Paper", "Scissors"];
 
 const roundResult = document.createElement('div');
-document.querySelector("body").appendChild(roundResult);
+document.querySelector(".optButtons").after(roundResult);
 
 
 const btnRock = document.querySelector('#rock');
