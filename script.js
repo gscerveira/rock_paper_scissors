@@ -1,5 +1,12 @@
 let options = ["Rock", "Paper", "Scissors"];
 
+const gameStart = document.querySelector(".gameStart");
+const gamePlay = document.querySelector(".gamePlay");
+const playerWin = document.querySelector(".playerWin");
+const playerLoss = document.querySelector(".playerLoss");
+
+addEventListener('load', () => {gameStart.classList.toggle("hidden")});
+
 const roundResult = document.createElement('div');
 document.querySelector(".optButtons").after(roundResult);
 
