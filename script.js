@@ -29,16 +29,20 @@ function getComputerChoice() {
 
 let chancesLeft = 10;
 let rightGuesses = 0;
+document.querySelector("#rightGuesses").textContent = `Right Guesses: ${rightGuesses}`;
+document.querySelector("#chancesLeft").textContent = `Chances Left: ${chancesLeft}`;
 
 function playRound(computerChoice, playerChoice) {
     let result;
     if (computerChoice === playerChoice) {
         result = `Yes! I was thinking of ${playerChoice}!`;
         rightGuesses++;
+        document.querySelector("#rightGuesses").textContent = `Right Guesses: ${rightGuesses}`;
     }
     else {
         result = `No! I was thinking of ${computerChoice}!`;
         chancesLeft--;
+        document.querySelector("#chancesLeft").textContent = `Chances Left: ${chancesLeft}`;
     }
     
     roundResult.textContent = result;
