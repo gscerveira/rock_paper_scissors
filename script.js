@@ -27,17 +27,33 @@ function getComputerChoice() {
     return playerChoice;
 }*/
 
+let chancesLeft = 10;
+let rightGuesses = 0;
+
 function playRound(computerChoice, playerChoice) {
     let result;
     if (computerChoice === playerChoice) {
         result = `Yes! I was thinking of ${playerChoice}!`;
+        rightGuesses++;
     }
     else {
         result = `No! I was thinking of ${computerChoice}!`;
+        chancesLeft--;
     }
     
     roundResult.textContent = result;
+    endGame(rightGuesses, chancesLeft);
 }
+
+function endGame(rightGuesses, chancesLeft) {
+    if (rightGuesses === 5) {
+        // Go to win form (to insert wish)
+    }
+    else if (chancesLeft === 0) {
+        // Append text "You lost, no wish for you!"
+    }
+}
+
 
 /*function game () {
     let pointsCounter = 0;
