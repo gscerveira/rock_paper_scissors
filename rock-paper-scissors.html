@@ -4,25 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Rock, Paper, Scissors.</title>
 </head>
 <body>
-    <div class="optButtons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
     <div>
-        <div id="rightGuesses">
-             
-        </div>
-        <div id="chancesLeft">
-             
-        </div>
+        <p>
+            You're a junior Web Developer. After countless hours of trying to fix a bug in your code, you can feel your brain
+            cells being fried.
+        </p>
+        <p>
+            You can't think of anything else, so, in a desperate moment, you start frantically rubbing your monitor screen hoping
+            the solution will magically appear.
+        </p>
+        <p>
+            You stop rubbing and nothing happened. Defeated, you get ready to turn off the computer, but then a mist starts coming
+            out of the screen, you think you're delirious but it starts to take shape.
+        </p>
+        <p>
+            It's a genie! It challenges you to guess what it's thinking of: Rock, Paper or Scissors. You have 10 chances, if you
+            get it right 5 times the genie will fix your code!
+        </p>
+        <button>
+            Start
+        </button>
     </div>
 
-    
+    <div class="gamePlay">
+         <div class="optButtons">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div>
+            <div id="rightGuesses">
+             
+            </div>
+            <div id="chancesLeft">
+             
+            </div>
+        </div>
+    </div>
+    <div class="playerWin">
+        <p>
+            You Won! The genie fixes your bug.
+        </p>
+    </div>
+
+    <div class="playerLoss">
+        <p>
+            You lost! You'll have to fix the bug yourself.
+        </p>
+    </div>   
 
 </body>
 </html>

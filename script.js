@@ -12,6 +12,8 @@ btnRock.addEventListener('click', () => playRound(getComputerChoice(), "Rock"));
 btnPaper.addEventListener('click', () => playRound(getComputerChoice(), "Paper"));
 btnScissors.addEventListener('click', () => playRound(getComputerChoice(), "Scissors"));
 
+const winModal = document.querySelector("#winModal");
+
 function getRndInteger(min, max) {
 return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -57,7 +59,6 @@ function endGame(rightGuesses, chancesLeft) {
         // Append text "You lost, no wish for you!"
     }
 }
-
 
 /*function game () {
     let pointsCounter = 0;
