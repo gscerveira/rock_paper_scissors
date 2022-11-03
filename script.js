@@ -69,10 +69,12 @@ function playRound(computerChoice, playerChoice) {
 
 function endGame(rightGuesses, chancesLeft) {
     if (rightGuesses === 5) {
-        // Go to win form (to insert wish)
+        gamePlay.classList.toggle("hidden");
+        playerWin.classList.toggle("hidden");
     }
     else if (chancesLeft === 0) {
-        // Append text "You lost, no wish for you!"
+        gamePlay.classList.toggle("hidden");
+        playerLoss.classList.toggle("hidden");
     }
 }
 
