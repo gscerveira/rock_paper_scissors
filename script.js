@@ -7,6 +7,10 @@ const playerLoss = document.querySelector(".playerLoss");
 
 addEventListener('load', () => {gameStart.classList.toggle("hidden")});
 
+const startBtn = document.querySelector('#startBtn');
+
+startBtn.addEventListener('click', () => (startGame()));
+
 const roundResult = document.createElement('div');
 document.querySelector(".optButtons").after(roundResult);
 
@@ -35,6 +39,11 @@ function getComputerChoice() {
     playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
     return playerChoice;
 }*/
+
+function startGame() {
+    gameStart.classList.toggle("hidden");
+    gamePlay.classList.toggle("hidden");
+}
 
 let chancesLeft = 10;
 let rightGuesses = 0;
