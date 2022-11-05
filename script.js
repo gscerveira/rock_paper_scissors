@@ -12,7 +12,7 @@ const startBtn = document.querySelector('#startBtn');
 startBtn.addEventListener('click', () => (startGame()));
 
 const roundResult = document.createElement('div');
-document.querySelector(".optButtons").after(roundResult);
+document.querySelector(".optButtons").prepend(roundResult);
 
 
 const btnRock = document.querySelector('#rock');

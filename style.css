@@ -1,13 +1,36 @@
 body {
     font-family: 'EB Garamond';
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .gameStart {
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #14579d;
+    font-size: x-large;
+}
+
+.gamePlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #14579d;
+}
+
+.playerWin,
+.playerLoss {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #14579d;
     font-size: x-large;
 }
