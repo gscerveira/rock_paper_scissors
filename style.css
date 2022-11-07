@@ -8,6 +8,22 @@ body {
     justify-content: center;
 }
 
+button {
+    font-family: inherit;
+    background-color: white;
+    color: #14579d;
+    border-color: #14579d;
+    font-size: larger;
+    border-style: solid;
+    border-width: medium;
+    padding: 0 20px;
+}
+
+button:hover {
+    background-color: #5f6cad;
+    color: white;
+}
+
 .gameStart {
     text-align: center;
     display: flex;
@@ -18,6 +34,7 @@ body {
 }
 
 .gamePlay {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
