@@ -12,6 +12,7 @@ const startBtn = document.querySelector('#startBtn');
 startBtn.addEventListener('click', () => (startGame()));
 
 const roundResult = document.createElement('div');
+roundResult.style.cssText += 'margin-bottom:20px;font-size:larger;font-weight:bold';
 document.querySelector(".optButtons").prepend(roundResult);
 
 

@@ -16,7 +16,7 @@ button {
     font-size: larger;
     border-style: solid;
     border-width: medium;
-    padding: 0 20px;
+    padding: 1px 20px;
 }
 
 button:hover {
@@ -40,6 +40,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     color: #14579d;
+    gap: 10px;
 }
 
 .playerWin,
