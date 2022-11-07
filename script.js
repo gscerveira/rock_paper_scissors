@@ -56,6 +56,7 @@ function playRound(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
         result = `Yes! I was thinking of ${playerChoice}!`;
         rightGuesses++;
+        chancesLeft--;
         document.querySelector("#rightGuesses").textContent = `Right Guesses: ${rightGuesses}`;
     }
     else {
